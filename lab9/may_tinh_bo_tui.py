@@ -1,15 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
-
 # Hàm xử lý khi bấm các nút số hoặc phép toán
 def nhap(gia_tri):
     hien_tai = bien_bieu_thuc.get()
     bien_bieu_thuc.set(hien_tai + str(gia_tri))
-
 # Hàm xóa toàn bộ màn hình tính toán
 def xoa_tat_ca():
     bien_bieu_thuc.set("")
-
 # Hàm tính toán kết quả khi bấm nút =
 def tinh_toan():
     bieu_thuc = bien_bieu_thuc.get().strip()
@@ -46,7 +43,6 @@ entry_hien_thi = tk.Entry(
     cua_so, textvariable=bien_bieu_thuc, font=("Arial", 16), justify="right", width=18
 )
 entry_hien_thi.grid(row=1, column=0, columnspan=4, padx=10, pady=10)
-
 # Định nghĩa danh sách các nút bấm của máy tính và vị trí (row, column)
 cac_nut = [
     ('7', 2, 0), ('8', 2, 1), ('9', 2, 2), ('/', 2, 3),
